@@ -11,7 +11,9 @@ import SwiftUI
 struct SimpleMemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MemoListView()
+                .environmentObject(MemoStore())
+                .environmentObject(DateFormatter.memoDateFormatter)
         }
     }
 }
